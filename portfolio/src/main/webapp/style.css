@@ -45,6 +45,7 @@ h5 {
 h6 {
   font-size: 16px; }
 
+/* Main Index */
 /* Navigation */
 .navigation {
   box-shadow: 0px 0px 29px 0px rgba(134, 134, 134, 0.25);
@@ -188,3 +189,25 @@ h6 {
     z-index: 5; 
     width: 430px;
     height: 430px;}
+
+/* Photography Gallery */
+/* Main Content */
+.image-thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image-thumbnails img {
+  margin: 10px;
+  max-height: 250px;
+  max-width: 250px;
+}
+
+.image-thumbnails img:hover {
+  border: thick solid white;
+}
+
+.content .container a{
+    color: #754ef9;
+}
