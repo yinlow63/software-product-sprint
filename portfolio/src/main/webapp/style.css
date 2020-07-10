@@ -145,3 +145,46 @@ h6 {
         text-align: center; }
         .social .social-icon ul li a:hover {
           color: #754ef9;}
+
+/* Main Content */
+.content {
+  height: 730px;
+  width: 100%;
+  margin-top: 60px;
+  position: relative;
+  overflow: hidden;}
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .content {
+      height: 550px; } }
+  @media (max-width: 767px) {
+    .content {
+      height: 550px; } }
+
+.content-right {
+  position: relative; }
+  .content-right .sub-title {
+    font-size: 30px;
+    color: #754ef9;
+    text-transform: uppercase;
+    padding-bottom: 15px; }
+    @media (max-width: 767px) {
+      .content-right .sub-title {
+        font-size: 24px; } }
+  .content-right .title {
+    font-size: 60px;
+    text-transform: uppercase;
+    padding-bottom: 15px; }
+    @media (max-width: 767px) {
+      .content-right .title {
+        font-size: 38px; } }
+  .content-right p {
+    padding-bottom: 40px; }
+
+.profile-image {
+  margin: 0 auto;
+  position: relative; }
+  .profile-image img {
+    position: relative;
+    z-index: 5; 
+    width: 430px;
+    height: 430px;}

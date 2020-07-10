@@ -16,6 +16,14 @@
     <script src="script.js"></script>
     <!-- Icons -->
     <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+
+    <!-- Typewriter Effect: Typed.js
+    typed.js - A JavaScript Typing Animation Library
+    Author: Matt Boldt <me@mattboldt.com>
+    Version: v2.0.11
+    Url: https://github.com/mattboldt/typed.js
+    License(s): MIT -->
+    <script src="typed.js"></script>
   </head>
   <body>
 
@@ -38,6 +46,51 @@
             </div> <!-- row -->
         </div> <!-- container -->
     </div> <!-- navigation -->
+
+
+    <!-- Main Content -->
+
+    <div class="content d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-5 col-lg-6">
+                    <div class="content-right">
+                        <h4 class="sub-title">Hello, I’m</h4>
+                        <h1 class="title">Yin Yin Low</h1>
+
+                        <!-- Introduction -->
+                        <p>
+                            <span id="typedElement"></span>
+                            <script>
+                                var options = {
+                                        strings: ["In a nutshell, I like to explore cool things.", 
+                                        "My passion in CS are in database, distributed systems, machine learning and software for social goods.",
+                                        "I studied Computer Science @ the University of Washington.",
+                                        "I am a part-time photographer - love taking landscape and portraits.", 
+                                        "I love badminton, hiking, and taekwondo.", 
+                                        "I grew up in Malaysia and currently live in Seattle, Washington.",
+                                        "I can speak 5 different languages (including dialects) and still learning!"],
+                                        typeSpeed: 30,
+                                        backSpeed: 20,
+                                        backDelay: 500,
+                                        loop: true
+                                };
+                                var typed = new Typed('#typedElement', options);
+                            </script>
+                        </p>
+                    </div> <!-- header content right -->
+                </div>
+
+                <!-- Profile picture -->
+                <div class="col-lg-6 offset-xl-1">
+                    <div class="profile-image d-none d-lg-block">
+                        <img src="/images/profile_2.jpg">
+                    </div> <!-- header image -->
+                </div>
+
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </div> <!-- content -->
 
 
     <!-- Social Icon -->
