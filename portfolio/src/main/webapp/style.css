@@ -211,3 +211,36 @@ h6 {
 .content .container a{
     color: #754ef9;
 }
+
+/* Main Button */
+.main-btn {
+  display: inline-block;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid #754ef9;
+  padding: 0 40px;
+  font-size: 15px;
+  line-height: 48px;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 5;
+  transition: all 0.3s ease-out 0s;
+  box-shadow: 0px 5px 8px 0px rgba(118, 78, 249, 0.55);
+  background-color: #754ef9;
+  text-transform: uppercase; }
+  .main-btn:hover {
+    background-color: #fff;
+    color: #754ef9;
+    border-color: #754ef9; }
+
+#quote-container {
+  margin-top: 20px;
+  color: #754ef9;
+  font-weight: 500;
+  font-size: 22px;
+  font-style: italic;
+}
