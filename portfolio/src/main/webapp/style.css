@@ -111,3 +111,37 @@ h6 {
         color: #754ef9; }
         .navigation .navbar .navbar-nav .nav-item.active a::before, .navigation .navbar .navbar-nav .nav-item:hover a::before {
           height: 45px; }
+
+/* Social Icon */
+.social {
+  position: absolute;
+  bottom: 30px;
+  left: 15px;
+  width: 100%; }
+  .social .social-icon {
+    position: relative; }
+    .social .social-icon::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 2px;
+      background-color: #754ef9;
+      left: -102.5%;
+      top: 50%;
+      transform: translateY(-50%); }
+    .social .social-icon ul li {
+      display: inline-block;
+      margin-left: 13px; }
+      .social .social-icon ul li:first-child {
+        margin-left: 0; }
+      .social .social-icon ul li a {
+        color: #ccc;
+        font-size: 25px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 50%;
+        transition: all 0.3s ease-out 0s;
+        text-align: center; }
+        .social .social-icon ul li a:hover {
+          color: #754ef9;}
