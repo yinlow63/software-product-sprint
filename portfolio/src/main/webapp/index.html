@@ -91,6 +91,7 @@
         </div> <!-- container -->
     </div> <!-- content -->
 
+    <!-- Random Fun Fact Generator -->
     <div class="content d-flex align-items-center">
         <div class="container">
             <h4 class="sub-title">Week 2</h4>
@@ -100,6 +101,28 @@
             <div id="greetings-container"></div>          -->
             <button class="main-btn" onclick="addFactsUsingArrowFunction()">Click Me!</button>
             <div id="facts-container"></div>
+        </div>
+    </div>
+
+    <!-- Simple Addition Calculator -->
+    <div class="content d-flex align-items-center">
+        <div class="container">
+            <h1 class="title">Simple Integer Calculator</h1>
+            <form action="/data" method="POST">
+
+                <p>Enter a comma-separated list of integers:</p>
+                <textarea name="text-input">1, 2, 3</textarea>
+                <br/><br/>
+
+                <p>Choose only one of the following options:</p>
+                <input type="radio" name="cal" value="add" > Addition
+                <br/>
+                <input type="radio" name="cal" value="mul" > Multiply
+                <br/><br/>
+
+                <input type="submit" />
+            </form>
+
         </div>
     </div>
 
