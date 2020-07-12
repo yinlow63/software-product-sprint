@@ -237,7 +237,7 @@ h6 {
     color: #754ef9;
     border-color: #754ef9; }
 
-#quote-container {
+#quote-container, #facts-container {
   margin-top: 20px;
   color: #754ef9;
   font-weight: 500;

@@ -48,3 +48,15 @@
   const quoteContainer = document.getElementById('quote-container');
   quoteContainer.innerText = quote;
 }
+
+function addGreetingsUsingArrowFunction() {
+  fetch('/data').then(response => response.text()).then((greeting) => {
+    document.getElementById('greetings-container').innerText = greeting;
+  });
+}
+
+function addFactsUsingArrowFunction() {
+  fetch('/data').then(response => response.text()).then((facts) => {
+    document.getElementById('facts-container').innerText = facts;
+  });
+}

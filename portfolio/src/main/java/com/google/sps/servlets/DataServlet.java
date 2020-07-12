@@ -15,6 +15,8 @@
 package com.google.sps.servlets;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -24,9 +26,24 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/data")
 public class DataServlet extends HttpServlet {
 
-  @Override
-  public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    response.setContentType("text/html;");
-    response.getWriter().println("<h1>Hello world!</h1>");
-  }
+    private List<String> funfacts;
+
+    @Override
+    public void init() {
+        funfacts = new ArrayList<>();
+        funfacts.add("PCs went by the name “Electronic Brains” in the 1950s.");
+        funfacts.add("Email has been around longer than the World Wide Web.");
+        funfacts.add("The first computer mouse was invented by Doug Engelbart and it was carved from wood.");
+    }
+
+    @Override
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        String fact = funfacts.get((int) (Math.random() * funfacts.size()));
+        response.setContentType("text/html;");
+
+        // String greetings = "How are you?";
+        // response.getWriter().println(greetings);
+    
+        response.getWriter().println(fact);
+    }
 }
