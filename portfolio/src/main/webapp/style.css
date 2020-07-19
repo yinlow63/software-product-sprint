@@ -1,9 +1,236 @@
-#content {
-  margin-left: auto;
-  margin-right: auto;
-  width: 650px;
+/* Font */
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800");
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #8a8fa3; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #32333c;
+  margin: 0px; }
+
+h1 {
+  font-size: 3.75rem; } /* 60px */
+
+h2 {
+  font-size: 2.25rem; } /* 36px */
+
+h3 {
+  font-size: 1.75rem; } /* 28px */
+
+h4 {
+  font-size: 1.375rem; } /* 22px */
+
+h5 {
+  font-size: 1.125rem; } /* 18px */
+
+h6 {
+  font-size: 100%; }    /* 16px */
+
+/* Main Index */
+/* Navigation */
+.navigation {
+  box-shadow: 0px 0px 29px 0px rgba(134, 134, 134, 0.25);
+  padding: 30px 0;
+  background-color: #fff;
+  transition: all 0.3s ease-out 0s; }
+  .navigation .navbar {
+    padding: 0;
+    position: relative; }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .navigation .navbar .navbar-collapse {
+        position: absolute;
+        top: 158%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        z-index: 99;
+        box-shadow: 0px 10px 15px 0px rgba(134, 134, 134, 0.15);
+        padding: 3px 12px; } }
+    @media (max-width: 767px) {
+      .navigation .navbar .navbar-collapse {
+        position: absolute;
+        top: 158%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        z-index: 99;
+        box-shadow: 0px 10px 15px 0px rgba(134, 134, 134, 0.15);
+        padding: 3px 12px; } }
+    .navigation .navbar .navbar-nav .nav-item {
+      margin-left: 30px; }
+      @media only screen and (min-width: 768px) and (max-width: 991px) {
+        .navigation .navbar .navbar-nav .nav-item {
+          margin: 4px 0; } }
+      @media (max-width: 767px) {
+        .navigation .navbar .navbar-nav .nav-item {
+          margin: 4px 0; } }
+      .navigation .navbar .navbar-nav .nav-item:first-child {
+        margin-left: 0; }
+      .navigation .navbar .navbar-nav .nav-item a {
+        text-transform: uppercase;
+        font-size: 16px;
+        color: #8a8fa3;
+        font-weight: 500;
+        position: relative;
+        transition: all 0.3s ease-out 0s; }
+        .navigation .navbar .navbar-nav .nav-item a::before {
+          position: absolute;
+          content: '';
+          width: 3px;
+          height: 0;
+          background-color: #754ef9;
+          left: 50%;
+          top: -50px;
+          transform: translateX(-50%);
+          transition: all 0.3s ease-out 0s; }
+          @media only screen and (min-width: 768px) and (max-width: 991px) {
+            .navigation .navbar .navbar-nav .nav-item a::before {
+              display: none; } }
+          @media (max-width: 767px) {
+            .navigation .navbar .navbar-nav .nav-item a::before {
+              display: none; } }
+      .navigation .navbar .navbar-nav .nav-item.active a, .navigation .navbar .navbar-nav .nav-item:hover a {
+        color: #754ef9; }
+        .navigation .navbar .navbar-nav .nav-item.active a::before, .navigation .navbar .navbar-nav .nav-item:hover a::before {
+          height: 45px; }
+
+/* Social Icon */
+.social {
+  position: absolute;
+  bottom: 30px;
+  left: 15px;
+  width: 100%; }
+  .social .social-icon {
+    position: relative; }
+    .social .social-icon::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 2px;
+      background-color: #754ef9;
+      left: -102.5%;
+      top: 50%;
+      transform: translateY(-50%); }
+    .social .social-icon ul li {
+      display: inline-block;
+      margin-left: 13px; }
+      .social .social-icon ul li:first-child {
+        margin-left: 0; }
+      .social .social-icon ul li a {
+        color: #ccc;
+        font-size: 25px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 50%;
+        transition: all 0.3s ease-out 0s;
+        text-align: center; }
+        .social .social-icon ul li a:hover {
+          color: #754ef9;}
+
+/* Main Content */
+.content {
+  height: 730px;
+  width: 100%;
+  margin-top: 60px;
+  position: relative;
+  overflow: hidden;}
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .content {
+      height: 550px; } }
+  @media (max-width: 767px) {
+    .content {
+      height: 550px; } }
+
+.content-right {
+  position: relative; }
+  .content-right .sub-title {
+    font-size: 30px;
+    color: #754ef9;
+    text-transform: uppercase;
+    padding-bottom: 15px; }
+    @media (max-width: 767px) {
+      .content-right .sub-title {
+        font-size: 24px; } }
+  .content-right .title {
+    font-size: 60px;
+    text-transform: uppercase;
+    padding-bottom: 15px; }
+    @media (max-width: 767px) {
+      .content-right .title {
+        font-size: 38px; } }
+  .content-right p {
+    padding-bottom: 40px; }
+
+.profile-image {
+  margin: 0 auto;
+  position: relative; }
+  .profile-image img {
+    position: relative;
+    z-index: 5; 
+    width: 430px;
+    height: 430px;}
+
+/* Photography Gallery */
+/* Main Content */
+.image-thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-#greeting-container {
+.image-thumbnails img {
+  margin: 10px;
+  max-height: 250px;
+  max-width: 250px;
+}
+
+.image-thumbnails img:hover {
+  border: thick solid white;
+}
+
+.content .container a{
+    color: #754ef9;
+}
+
+/* Main Button */
+.main-btn {
+  display: inline-block;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid #754ef9;
+  padding: 0 40px;
+  font-size: 15px;
+  line-height: 48px;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 5;
+  transition: all 0.3s ease-out 0s;
+  box-shadow: 0px 5px 8px 0px rgba(118, 78, 249, 0.55);
+  background-color: #754ef9;
+  text-transform: uppercase; }
+  .main-btn:hover {
+    background-color: #fff;
+    color: #754ef9;
+    border-color: #754ef9; }
+
+#quote-container {
   margin-top: 20px;
+  color: #754ef9;
+  font-weight: 500;
+  font-size: 22px;
+  font-style: italic;
 }

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Yin Yin Low's Portfolio</title>
+    <title>Yin's Photography</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -16,14 +16,6 @@
     <script src="script.js"></script>
     <!-- Icons -->
     <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
-
-    <!-- Typewriter Effect: Typed.js
-    typed.js - A JavaScript Typing Animation Library
-    Author: Matt Boldt <me@mattboldt.com>
-    Version: v2.0.11
-    Url: https://github.com/mattboldt/typed.js
-    License(s): MIT -->
-    <script src="typed.js"></script>
   </head>
   <body>
 
@@ -35,9 +27,9 @@
                     <nav class="navbar navbar-expand-lg">
                         <div class="collapse navbar-collapse">
                             <ul class="navbar-nav ml-auto">
-                                <li class="nav-item active"><a href=".">HOME</a></li>
+                                <li class="nav-item "><a href="index.html">HOME</a></li>
                                 <li class="nav-item"><a href="YinYinLow_Resume.pdf">RESUME</a></li>
-                                <li class="nav-item"><a href="photography.html">PHOTOGRAPHY</a></li>
+                                <li class="nav-item active"><a href=".">PHOTOGRAPHY</a></li>
                                 <li class="nav-item"><a href="about.html">ABOUT</a></li>
                             </ul>
                         </div> <!-- navbar collapse -->
@@ -47,50 +39,23 @@
         </div> <!-- container -->
     </div> <!-- navigation -->
 
-
-    <!-- Main Content -->
+    <!-- Gallery -->
     <div class="content d-flex align-items-center">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-5 col-lg-6">
-                    <div class="content-right">
-                        <h4 class="sub-title">Hello, I’m</h4>
-                        <h1 class="title">Yin Yin Low</h1>
-
-                        <!-- Introduction -->
-                        <p>
-                            <span id="typedElement"></span>
-                            <script>
-                                var options = {
-                                        strings: ["In a nutshell, I like to explore cool things.", 
-                                        "My passion in CS are in database, distributed systems, machine learning and software for social goods.",
-                                        "I studied Computer Science @ the University of Washington.",
-                                        "I am a part-time photographer - love taking landscape and portraits.", 
-                                        "I love badminton, hiking, and taekwondo.", 
-                                        "I grew up in Malaysia and currently live in Seattle, Washington.",
-                                        "I can speak 5 different languages (including dialects) and still learning!"],
-                                        typeSpeed: 30,
-                                        backSpeed: 20,
-                                        backDelay: 500,
-                                        loop: true
-                                };
-                                var typed = new Typed('#typedElement', options);
-                            </script>
-                        </p>
-                    </div> <!-- header content right -->
-                </div>
-
-                <!-- Profile picture -->
-                <div class="col-lg-6 offset-xl-1">
-                    <div class="profile-image d-none d-lg-block">
-                        <img src="/images/profile_2.jpg">
-                    </div> <!-- header image -->
-                </div>
-
-            </div> <!-- row -->
+            <h1>Yin Yin Low's Photography Gallery</h1>
+            <div class="image-thumbnails">
+                <a href="https://flic.kr/p/2j5GUQF"><img src="/images/seattle-5.jpg" alt="Seattle"></a>
+                <a href="https://flic.kr/p/Rqfbch"><img src="/images/landscape-2.jpg" alt="Whistler"></a>
+                <a href="https://flic.kr/p/2j8agYT"><img src="/images/portraits-1.jpg" alt="Graduation"></a>
+                <a href="/https://flic.kr/p/TfW4GY"><img src="/images/seattle-4.jpg" alt="Seattle"></a>
+                <a href="https://flic.kr/p/2j8B5V2"><img src="/images/portraits-3.jpg" alt="Portraits"></a>
+                <a href="https://flic.kr/p/2j4Hj19"><img src="/images/landscape-1.jpg" alt="Cloud"></a>
+                <a href="https://flic.kr/p/2j8zsnz"><img src="/images/portraits-2.jpg" alt="Graduation Portraits"></a>
+                <a href="https://flic.kr/p/PUZ85B"><img src="/images/california-1.jpg" alt="California"></a>
+            </div> <!-- image thumbnails -->
+            <p>More photos please checkout my <a href="https://www.flickr.com/photos/144076621@N03/albums">Flickr Account</a></p>
         </div> <!-- container -->
     </div> <!-- content -->
-
 
     <!-- Social Icon -->
     <!-- Header Social Icon -->
@@ -112,5 +77,13 @@
                 </div> <!-- container -->
             </div> <!-- social -->
 
+
+    <!-- <div id="content">
+      <h1>My Portfolio</h1>
+      <p>This is my portfolio.</p>
+      <p>Click here to get a random message:</p>
+      <button onclick="addRandomGreeting()">Hello</button>
+      <div id="greeting-container"></div>
+    </div> -->
   </body>
 </html>

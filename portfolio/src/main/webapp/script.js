@@ -15,14 +15,36 @@
 /**
  * Adds a random greeting to the page.
  */
-function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+// function addRandomGreeting() {
+//   const greetings =
+//       ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+
+//   // Pick a random greeting.
+//   const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+
+//   // Add it to the page.
+//   const greetingContainer = document.getElementById('greeting-container');
+//   greetingContainer.innerText = greeting;
+// }
+
+/**
+    Show a random quote from your favourite TV show or a random fact about yourself
+    on the page.
+ */
+ function addRandomQuote() {
+  const quotes =
+      [
+          'Carpe diem. Seize the day, boys. Make your lives extraordinary. - Dead Poet Society', 
+          'Oh yes, the past can hurt. But you can either run from it, or learn from it. – The Lion King', 
+          'We are who we choose to be. – Spider-Man',
+          'You cannot live your life to please others. The choice must be yours. – Alice in Wonderland',
+          'It is not our abilities that show what we truly are… it is our choices. –  Harry Potter and the Chamber of Secrets',
+          'My momma always said, “Life is like a box of chocolates, you never know what you’re gonna get.” – Forrest Gump'];
 
   // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+  const quote = quotes[Math.floor(Math.random() * quotes.length)];
 
   // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+  const quoteContainer = document.getElementById('quote-container');
+  quoteContainer.innerText = quote;
 }
