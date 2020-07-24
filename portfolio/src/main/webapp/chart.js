@@ -16,24 +16,48 @@
 google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(drawChart);
 
-/** Creates a chart and adds it to the page. */
+// Hello World Edition
+// /** Creates a chart and adds it to the page. */
+// function drawChart() {
+//   const data = new google.visualization.DataTable();
+//   data.addColumn('string', 'Fruits');
+//   data.addColumn('number', 'Count');
+//         data.addRows([
+//           ['Apple', 20],
+//           ['Orange', 15],
+//           ['Pear', 5]
+//         ]);
+
+//   const options = {
+//     'title': 'Fruits',
+//     'width':500,
+//     'height':400
+//   };
+
+//   const chart = new google.visualization.PieChart(
+//       document.getElementById('chart-container'));
+//   chart.draw(data, options);
+// }
+
+/** Fetches covid data and uses it to create a chart. */
 function drawChart() {
-  const data = new google.visualization.DataTable();
-  data.addColumn('string', 'Fruits');
-  data.addColumn('number', 'Count');
-        data.addRows([
-          ['Apple', 20],
-          ['Orange', 15],
-          ['Pear', 5]
-        ]);
+  fetch('/covid-data').then(response => response.json())
+  .then((covidsCases) => {
+    const data = new google.visualization.DataTable();
+    data.addColumn('string', 'Month, 2020');
+    data.addColumn('number', 'Total Detected Case');
+    Object.keys(covidsCases).forEach((year) => {
+      data.addRow([year, covidsCases[year]]);
+    });
 
-  const options = {
-    'title': 'Fruits',
-    'width':500,
-    'height':400
-  };
+    const options = {
+      'title': 'COVID-19 US Monthly Data in 2020',
+      'width':1000,
+      'height':500
+    };
 
-  const chart = new google.visualization.PieChart(
-      document.getElementById('chart-container'));
-  chart.draw(data, options);
+    const chart = new google.visualization.LineChart(
+        document.getElementById('chart-container'));
+    chart.draw(data, options);
+  });
 }
