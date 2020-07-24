@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Yin's Photography</title>
+    <title>Upload Photo</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -27,11 +27,12 @@
                     <nav class="navbar navbar-expand-lg">
                         <div class="collapse navbar-collapse">
                             <ul class="navbar-nav ml-auto">
-                                <li class="nav-item "><a href="index.html">HOME</a></li>
+                                <li class="nav-item"><a href="index.html">HOME</a></li>
                                 <li class="nav-item"><a href="YinYinLow_Resume.pdf">RESUME</a></li>
-                                <li class="nav-item active"><a href=".">PHOTOGRAPHY</a></li>
+                                <li class="nav-item"><a href="photography.html">PHOTOGRAPHY</a></li>
                                 <li class="nav-item"><a href="about.html">ABOUT</a></li>
-                                <li class="nav-item"><a href="charts.html">CHARTS</a></li>
+                                <li class="nav-item active"><a href=".">UPLOAD YOUR PHOTO</a></li>
+                                <li class="nav-item "><a href="charts.html">CHARTS</a></li>
                             </ul>
                         </div> <!-- navbar collapse -->
                     </nav> <!-- navbar -->
@@ -40,23 +41,22 @@
         </div> <!-- container -->
     </div> <!-- navigation -->
 
-    <!-- Gallery -->
+    <!-- Upload your photo -->
     <div class="content d-flex align-items-center">
-        <div class="container">
-            <h1>Yin Yin Low's Photography Gallery</h1>
-            <div class="image-thumbnails">
-                <a href="https://flic.kr/p/2j5GUQF"><img src="/images/seattle-5.jpg" alt="Seattle"></a>
-                <a href="https://flic.kr/p/Rqfbch"><img src="/images/landscape-2.jpg" alt="Whistler"></a>
-                <a href="https://flic.kr/p/2j8agYT"><img src="/images/portraits-1.jpg" alt="Graduation"></a>
-                <a href="/https://flic.kr/p/TfW4GY"><img src="/images/seattle-4.jpg" alt="Seattle"></a>
-                <a href="https://flic.kr/p/2j8B5V2"><img src="/images/portraits-3.jpg" alt="Portraits"></a>
-                <a href="https://flic.kr/p/2j4Hj19"><img src="/images/landscape-1.jpg" alt="Cloud"></a>
-                <a href="https://flic.kr/p/2j8zsnz"><img src="/images/portraits-2.jpg" alt="Graduation Portraits"></a>
-                <a href="https://flic.kr/p/PUZ85B"><img src="/images/california-1.jpg" alt="California"></a>
-            </div> <!-- image thumbnails -->
-            <p>More photos please checkout my <a href="https://www.flickr.com/photos/144076621@N03/albums">Flickr Account</a></p>
-        </div> <!-- container -->
-    </div> <!-- content -->
+        <div class="container" onload="fetchBlobstoreUrlAndShowForm()">
+            <p>Type a message and click submit:</p>
+
+            <form id="my-form" class="hidden" method="POST" enctype="multipart/form-data">
+            <p>Type some text:</p>
+            <textarea name="message"></textarea>
+            <br/>
+            <p>Upload an image:</p>
+            <input type="file" name="image">
+            <br/><br/>
+            <button>Submit</button>
+            </form>
+        </div>
+    </div>
 
     <!-- Social Icon -->
     <!-- Header Social Icon -->
