@@ -14,28 +14,36 @@
 
 package com.google.sps.servlets;
 
-import com.google.appengine.api.blobstore.BlobstoreService;
-import com.google.appengine.api.blobstore.BlobstoreServiceFactory;
+import com.google.gson.Gson;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * When the fetch() function requests the /blobstore-upload-url URL, the content of the response is
- * the URL that allows a user to upload a file to Blobstore. If this sounds confusing, try running a
- * dev server and navigating to /blobstore-upload-url to see the Blobstore URL.
- */
-@WebServlet("/blobstore-upload-url")
-public class BlobstoreUploadUrlServlet extends HttpServlet {
+
+@WebServlet("/fund-data")
+public class FundraiserServlet extends HttpServlet {
+
+  private Map<String, Integer> projectVotes = new HashMap<>();
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    BlobstoreService blobstoreService = BlobstoreServiceFactory.getBlobstoreService();
-    String uploadUrl = blobstoreService.createUploadUrl("/my-form-handler");
+    response.setContentType("application/json");
+    Gson gson = new Gson();
+    String json = gson.toJson(projectVotes);
+    response.getWriter().println(json);
+  }
 
-    response.setContentType("text/html");
-    response.getWriter().println(uploadUrl);
+  @Override
+  public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    String project = request.getParameter("proj");
+    int currentVotes = projectVotes.containsKey(project) ? projectVotes.get(project) : 0;
+    projectVotes.put(project, currentVotes + 1);
+
+    response.sendRedirect("/index.html");
   }
 }

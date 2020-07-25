@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Charts</title>
+    <title>Fundraiser</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -15,7 +15,7 @@
     <!-- Google Charts -->
     <script src="https://www.gstatic.com/charts/loader.js"></script>
     <!-- JavaScript -->
-    <script src="chart.js"></script>
+    <script src="fund.js"></script>
     <!-- Icons -->
     <link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
     
@@ -34,8 +34,8 @@
                                 <li class="nav-item"><a href="YinYinLow_Resume.pdf">RESUME</a></li>
                                 <li class="nav-item"><a href="photography.html">PHOTOGRAPHY</a></li>
                                 <li class="nav-item "><a href="about.html">ABOUT</a></li>
-                                <li class="nav-item active"><a href=".">CHARTS</a></li>
-                                <li class="nav-item "><a href="fundraiser.html">FUNDRAISER</a></li>
+                                <li class="nav-item"><a href="charts.html">CHARTS</a></li>
+                                <li class="nav-item active"><a href=".">FUNDRAISER</a></li>
                             </ul>
                         </div> <!-- navbar collapse -->
                     </nav> <!-- navbar -->
@@ -49,12 +49,17 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="content-right">
-                    <h4 class="sub-title">Coronavirus in the U.S. 2020</h4>
-                    <p style="padding-bottom: 0px;">
-                        More than 4,112,900 people in the United States have been infected with the coronavirus and at least 145,100 have died, according to a New York Times database.
-                    </p>
-                    <div id="filter_div"></div>
+                    <h4 class="sub-title">Fundraiser</h4>
                     <div id="chart-container"></div>
+                    <h2>Vote</h2>
+                    <form action="/fund-data" method="POST">
+                    <select name="proj">
+                        <option value="A">Project A</option>
+                        <option value="B">Project B</option>
+                        <option value="C">Project C</option>
+                    </select>
+                    <button>Submit</button>
+                    </form>
                             
                 </div> <!-- content right -->
 
@@ -62,25 +67,5 @@
         </div> <!-- container -->
     </div> <!-- content -->
 
-
-    <!-- Social Icon -->
-    <!-- Header Social Icon -->
-            <div class="social">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="social-icon">
-                                <ul>
-                                    <li><a href="https://www.linkedin.com/in/yinyinlow63/"><i class="lni lni-linkedin-original"></i></a></li>                        
-                                    <li><a href="https://www.facebook.com/yinyinlow63"><i class="lni lni-facebook-filled"></i></a></li>
-                                    <li><a href="https://github.com/yinlow63/"><i class="lni lni-github"></i></a></li>
-                                    <li><a href="https://www.instagram.com/lowyinyin/"><i class="lni lni-instagram-original"></i></a></li>
-                                    <li><a href="https://www.flickr.com/photos/144076621@N03/albums"><i class="lni lni-flickr"></i></a></li>
-                                </ul>
-                            </div> <!-- social icon -->
-                        </div>
-                    </div> <!-- row -->
-                </div> <!-- container -->
-            </div> <!-- social -->
   </body>
 </html>
