@@ -23,7 +23,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/** Returns bigfoot data as a JSON object, e.g. {"2017": 52, "2018": 34}] */
+/** Returns covid data as a JSON object, e.g. {"1": 52, "2": 34}] */
 @WebServlet("/covid-data")
 public class CovidDataServlet extends HttpServlet {
 

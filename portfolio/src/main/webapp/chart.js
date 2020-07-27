@@ -44,7 +44,7 @@ function drawChart() {
   fetch('/covid-data').then(response => response.json())
   .then((covidsCases) => {
     const data = new google.visualization.DataTable();
-    data.addColumn('string', 'Month, 2020');
+    data.addColumn('string', 'Month');
     data.addColumn('number', 'Total Detected Case');
     Object.keys(covidsCases).forEach((year) => {
       data.addRow([year, covidsCases[year]]);
